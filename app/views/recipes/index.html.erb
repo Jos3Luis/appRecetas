@@ -10,7 +10,7 @@
     <th>Ranking Social</th>
   </tr>
   <% @recetas.each do |receta| %>
-    <tr class=<%= cycle('even', 'odd') %>>
+    <tr class='<%= cycle('even', 'odd') %>'>
       <td><%= link_to image_tag(receta["image_url"], size: "100x100"), receta["source_url"] %></td>
       <td><%= link_to sanitize(receta["title"]), receta["source_url"] %></td>
       <td><%= receta["social_rank"] %></td>
@@ -20,3 +20,8 @@
 <hr />
 <h4>Se encontraron <% @recetas.size %> Resultados</h4>
 <% end %>
+
+<style type="text/css">
+	tr:nth-child(even) {background: #CCC}
+	tr:nth-child(odd) {background: #FFF}
+</style>
