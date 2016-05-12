@@ -14,6 +14,6 @@ class Recipe < ActiveRecord::Base
 	def self.for term
 		#filas=get("", query: { q: qry})
 		#filas['recetas'] # Retorna el ultimo
-		get("", query: { q: term})["recipes"]
+		get("", query: { q: term})
   	end
 end
