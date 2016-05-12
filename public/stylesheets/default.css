@@ -5,11 +5,18 @@ table {
     border-collapse: collapse;
     width: 100%;
 }
+th{
+    text-transform: uppercase;	
+}
 th, td {
     text-align: left;
     padding: 8px;
 }
-tr:nth-child(even){background-color: #f2f2f2}
+img{
+	padding 2px;
+	border 1px;
+}
+tr:nth-child(even){background-color: #D0F1D4}
 th {
     background-color: #4CAF50;
     color: white;
@@ -17,5 +24,18 @@ th {
 
 h1{
 	text-align: center;
+	color: #4CAF50;
 
 }
+.link{
+	text-decoration: none !important;
+	color:green;
+}
+.link:hover{
+	border-bottom: 1px solid green !important;
+}
+
+/*zoom*/
+.frame { height: 100px; width: 100px; overflow: hidden; } 
+.zoom a img { height: 200px; width: 200px; -webkit-transition: all 2s ease; -moz-transition: all 2s ease; -ms-transition: all 2s ease; transition: all 2s ease; } 
+.zoom a img:hover { width: 300px; height: 300px; } - See more at: http://www.corelangs.com/css/box/zoom.html#sthash.ukbeRmdW.dpuf

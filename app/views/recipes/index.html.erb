@@ -1,4 +1,4 @@
-<h1 style="color: blue">Listado de Recetas</h1>
+<h1>Listado de Recetas</h1>
 <hr />
 <% if (@recetas.nil? or @recetas == []) %>
 <h2>No Hay recetas</h2>
@@ -11,8 +11,8 @@
   </tr>
   <% @recetas.each do |receta| %>
     <tr class='<%= cycle('even', 'odd') %>'>
-      <td><%= link_to image_tag(receta["image_url"], size: "100x100"), receta["source_url"] %></td>
-      <td><%= link_to sanitize(receta["title"]), receta["source_url"] %></td>
+      <td><div class="zoom frame"><%= link_to image_tag(receta["image_url"], size: "100x100"), receta["source_url"] %></div></td>
+      <td><%= link_to sanitize(receta["title"]), receta["source_url"],{ :class=>"link" } %></td>
       <td><%= receta["social_rank"] %></td>
     </tr>
   <% end %>
