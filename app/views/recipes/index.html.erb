@@ -3,7 +3,7 @@
 <% if (@recetas.nil? or @recetas == []) %>
 <h2>No Hay recetas</h2>
 <% else %>
-<table>
+<table align="center">
   <tr style="background-color: black;color:white">
     <th>Thumbnail</th>
     <th>Titulo</th>
@@ -22,6 +22,17 @@
 <% end %>
 
 <style type="text/css">
-	tr:nth-child(even) {background: #CCC}
-	tr:nth-child(odd) {background: #FFF}
+	table {
+	    border-collapse: collapse;
+	    width: 100%;
+	}
+	th, td {
+	    text-align: left;
+	    padding: 8px;
+	}
+	tr:nth-child(even){background-color: #f2f2f2}
+	th {
+	    background-color: #4CAF50;
+	    color: white;
+	}
 </style>
