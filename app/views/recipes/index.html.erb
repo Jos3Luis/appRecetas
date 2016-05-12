@@ -3,6 +3,7 @@
 <% if (@recetas.nil? or @recetas == []) %>
 <h2>No Hay recetas</h2>
 <% else %>
+<h3>Su Query fue: <%= @param %></h3>
 <table align="center">
   <tr style="background-color: black;color:white">
     <th>Thumbnail</th>
@@ -18,5 +19,7 @@
   <% end %>
 </table>
 <hr />
-<h4>Se encontraron <% @recetas.size %> Resultados</h4>
+<h4>Se encontraron <% @recetas.count %> Resultados</h4>
+<br/>
+implementado por Jose Luis Quispe Aracayo
 <% end %>
